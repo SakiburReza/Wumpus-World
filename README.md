@@ -20,3 +20,53 @@ As a player, you start from [0,0], moving upwards. You have the following moves:
 4.	Shoot: You have 3 arrows with you. You can shoot the arrow at your moving direction. If the Wumpus is in that direction, it will scream loudly in pain and die. But if it is behind you, you cannot touch it. You have to turn around before shooting to kill it.
 
 You are given a C++ skeleton code that (nearly) implements the above scenario. You have to complete the code.
+
+## Tasks:
+
+## Part A:
+
+Study the given skeleton carefully before going into the following tasks.
+
+1.	void Position::moveRight() : moves a certain position to the cell immediately to its right. Modify it so that the position cannot go beyond the grid.
+2.	void Position::moveLeft() : moves a certain position to the cell immediately to its left. Modify it so that the position cannot go beyond the grid.
+3.	void Position::moveUp() : moves a certain position to the cell immediately above it. Modify it so that the position cannot go beyond the grid.
+4.	void Position::moveDown() : moves a certain position to the cell immediately below it. Modify it so that the position cannot go beyond the grid.
+5.	bool Position::isAdjacent(Position p) : implement the function. It returns true if two are adjacent. Two cells are adjacent if they are side by side. Note that [0,0] and [1,1] are not adjacent.
+6.	bool isSamePoint(Position p) : implement the function. It returns true if two cells are the same.
+7.	Wumpus::Wumpus() : implement this default constructor of Wumpus class so that it initialized the position randomly within the grid, and sets it to alive.
+8.	Player::Player() : implement this default constructor of Player class. All necessary information are already given in the game description.
+9.	void Player::turnLeft() : implement this function. It changes the direction of the player as follows:
+
+Before	After
+UP	LEFT
+LEFT	DOWN
+DOWN	RIGHT
+RIGHT	UP
+
+10.	void Player::turnRight() : implement this function. Figure out how the direction is affected by yourself.
+
+11.	void Player::moveForward() : implement this function. The player moves to the next cell along the direction.
+
+12.	WumpusWorld::WumpusWorld() : implement this default constructor. It will initialize the Wumpus, the Pit and the Gold at random positions.
+
+13.	WumpusWorld::WumpusWorld(int wumpus_x, int wumpus_y) : implement this parameterized constructor. This is like the default constructor, only the location of the Wumpus is provided here.
+
+14.	WumpusWorld::WumpusWorld(int wumpus_x, int wumpus_y, int gold_x, int gold_y) : implement this constructor. Here, all information except that of the Pit is delivered.
+
+15.	void WumpusWorld::shoot() : implement this function. This takes effect when a player shoots. Give proper messages if the player hits or misses.
+
+
+## Part B:
+
+This is more of a planning and implementing task. The code that you now have works just fine (given that you have implemented it properly), except for the part of the Pit. There is no Pit in the code now. Implement the concept of Pit in your code. Identify the functions that need to be modified to do so. Modify those functions. You must think in object-oriented way and implement in object-oriented way.
+
+
+
+
+
+
+
+## Restrictions:
+
+You cannot use any 2D array for the assignment. You cannot change the encapsulations that have been enforced in the given skeleton code. 
+
